@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('direccion');
             $table->string('genero', 1);
             $table->integer('telefono');
-            $table->string('correo');
+            $table->string('email');
             $table->string('clave');
             $table->timestamps();
         });

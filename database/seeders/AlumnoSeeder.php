@@ -21,7 +21,7 @@ class AlumnoSeeder extends Seeder
         $alumno->direccion = 'Col. Santa Monica, Santa Tecla, La libertad';
         $alumno->genero = 'M';
         $alumno->telefono = 54981239;
-        $alumno->correo = 'javierrivera@gmail.com';
+        $alumno->email = 'javierrivera@gmail.com';
         $alumno->clave = 'abcd1234';
         $alumno->save();
     }
