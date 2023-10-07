@@ -16,10 +16,10 @@ class Curso extends Model
     ];
 
     public function profesors(){
-        return $this->belongsTo(Profesor::class);
+        return $this->belongsTo(Profesor::class, 'idprofesor');
     }
 
     public function notas(){
-        return $this->hasMany(Nota::class);
+        return $this->hasMany(Nota::class, 'idcurso');
     }
 }

@@ -19,6 +19,6 @@ class Alumno extends Model
     ];
 
     public function notas(){
-        return $this->hasMany(Nota::class);
+        return $this->hasMany(Nota::class, 'idalumno');
     }
 }

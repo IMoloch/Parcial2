@@ -20,10 +20,10 @@ class Nota extends Model
     ];
 
     public function alumnos(){
-        return $this->belongsTo(Alumno::class);
+        return $this->belongsTo(Alumno::class, 'idalumno');
     }
 
     public function cursos(){
-        return $this->belongsTo(Curso::class);
+        return $this->belongsTo(Curso::class, 'idcurso');
     }
 }

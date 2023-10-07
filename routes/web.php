@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AlumnoController;
+use App\Http\Controllers\ProfesorController;
+use App\Http\Controllers\CursoController;
+use App\Http\Controllers\NotaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,16 +17,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
+    Route::get('/', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/tables/alumno', [AlumnoController::class,'index'])->name('alumnos.index');
+    Route::get('/tables/profesor', [ProfesorController::class,'index'])->name('profesor.index');
+    Route::get('/tables/curso', [CursoController::class,'index'])->name('cursos.index');
+    Route::get('/tables/nota', [NotaController::class,'index'])->name('notas.index');
 });
+
