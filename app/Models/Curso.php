@@ -15,6 +15,7 @@ class Curso extends Model
         'idprofesor'
     ];
 
+    //Asignacion de relaciones
     public function profesors(){
         return $this->belongsTo(Profesor::class, 'idprofesor');
     }

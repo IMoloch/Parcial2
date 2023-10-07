@@ -18,6 +18,7 @@ class Alumno extends Model
     'clave'
     ];
 
+    //Asignacion de relaciones
     public function notas(){
         return $this->hasMany(Nota::class, 'idalumno');
     }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// Llamamiento al documento necesario para realizar Query Builder
 use Illuminate\Support\Facades\DB;
 //Importacion del modal medioT
 use App\Models\Alumno;

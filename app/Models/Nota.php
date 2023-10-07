@@ -19,6 +19,7 @@ class Nota extends Model
         'idcurso',
     ];
 
+    //Asignacion de relaciones
     public function alumnos(){
         return $this->belongsTo(Alumno::class, 'idalumno');
     }

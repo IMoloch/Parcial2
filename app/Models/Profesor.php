@@ -17,6 +17,7 @@ class Profesor extends Model
         'clave'
     ];
 
+    //Asignacion de relaciones
     public function cursos(){
         return $this->hasMany(Curso::class, 'idprofesor');
     }

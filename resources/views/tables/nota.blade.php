@@ -1,4 +1,5 @@
 <x-app-layout>
+   {{-- Importamos con el CDN a bootstrap --}}
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
@@ -41,6 +42,7 @@
     </table>
   </div>
 </div>
+{{-- Atributo de la variable que contiene el modelo que permite mostrar la paginacion --}}
 <div class="me-4 ms-4 mt-2">
   {{ $notas->links('') }}
 </div>
